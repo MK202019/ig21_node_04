@@ -23,7 +23,9 @@ router.post('/auth', (req, res) => {
 })
 
 router.get('/',(req,res) => {
-    res.render('index.ejs')
+    let data = {}
+    data.title = 'トップページ'
+    res.render('index.ejs',data)
 })
 
 router.get('/profile',(req,res) => {
