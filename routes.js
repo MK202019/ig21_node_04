@@ -19,7 +19,7 @@ router.post('/auth', (req, res) => {
 })
 
 router.get('/',(req,res) => {
-    res.send('Hello YSE!!!')
+    res.render('index.ejs')
 })
 
 router.get('/profile',(req,res) => {
