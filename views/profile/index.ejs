@@ -11,11 +11,16 @@
     <a href="/">top</a>
     <d1>
         <dt>名前</dt>
-        <dd>松本　光太郎</dd>
+        <dd><%=user.name%></dd>
         <dt>出身地</dt>
-        <dd>神奈川県</dd>
+        <dd><%=user.birthplace%></dd>
         <dt>趣味</dt>
         <dd>時間旅行</dd>
+        <dd>
+            <% user.hobby.forEach((hobby) => {%>
+                <%=hobby%>
+            <%  }) %>
+        </dd>
     </d1>
 </body>
 </html>

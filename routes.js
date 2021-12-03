@@ -29,7 +29,17 @@ router.get('/',(req,res) => {
 })
 
 router.get('/profile',(req,res) => {
-    res.render('profile/index.ejs')
+    let user = {
+        name: '松本 光太郎',
+        birthplace: '神奈川',
+        hobby:['読書','食事']
+    }
+
+    let data = {}
+    data.title = 'プロフィール'
+    data.user = user
+
+    res.render('profile/index.ejs',data)
 })
 
 router.get('/item/:id',(req, res) => {
