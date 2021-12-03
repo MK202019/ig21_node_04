@@ -4,6 +4,10 @@ const router = express.Router()
 const default_login_name = process.env.LOGIN_NAME
 const default_passsword = process.env.PASSWORD
 
+router.get('/login',(req,res) => {
+    res.render('login/index.ejs')
+})
+
 router.post('/auth', (req, res) => {
     let message = 'ログインできません';
     const login_name = req.body.login_name
@@ -26,13 +30,9 @@ router.get('/profile',(req,res) => {
     res.send('This is prfile page')
 })
 
-//router.get('/apdate',(req,res) => {
-//    res.send('XXXXXX!')
-//})
-
-//router.listen(port,host,() => {
-//    console.log('http://' + host + ':' + port)
-//})
+router.get('/profile',(req,res) => {
+    res.render('profile/index.ejs')
+})
 
 module.exports = router
 
