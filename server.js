@@ -8,8 +8,6 @@ const port = process.env.PORT
 const routes = require('./routes')
 const app = express()
 
-
-
 app.use(express.static(__dirname + '/public'))
 app.use(express.urlencoded({ extended: true }))
 

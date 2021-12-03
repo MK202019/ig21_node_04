@@ -12,8 +12,8 @@ router.post('/auth', (req, res) => {
     let message = 'ログインできません';
     const login_name = req.body.login_name
     const password = req.body.password
-    console.log(login_name)
-    console.log(password)
+    //console.log(login_name)
+    //console.log(password)
     
     if (login_name == default_login_name 
         && password == default_passsword) {
@@ -27,13 +27,14 @@ router.get('/',(req,res) => {
 })
 
 router.get('/profile',(req,res) => {
-    res.send('This is prfile page')
-})
-
-router.get('/profile',(req,res) => {
     res.render('profile/index.ejs')
 })
 
+router.get('/item/:id',(req, res) => {
+    const id = req.params.id
+    console.log(id)
+    res.render('item/show.ejs')
+})
 module.exports = router
 
 
