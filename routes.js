@@ -1,4 +1,5 @@
 const express = require('express')
+const item = require('./models/item')
 const router = express.Router()
 
 const default_login_name = process.env.LOGIN_NAME
@@ -12,8 +13,6 @@ router.post('/auth', (req, res) => {
     let message = 'ログインできません';
     const login_name = req.body.login_name
     const password = req.body.password
-    //console.log(login_name)
-    //console.log(password)
     
     if (login_name == default_login_name 
         && password == default_passsword) {
@@ -45,6 +44,7 @@ router.get('/profile',(req,res) => {
 router.get('/item/:id',(req, res) => {
     const id = req.params.id
     console.log(id)
+    console.log(item)
     res.render('item/show.ejs')
 })
 module.exports = router
