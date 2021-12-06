@@ -18,8 +18,6 @@ app.use(layouts) ;
 
 app.use(routes)
 
-app.set('view engine', 'ejs')
-
 app.listen(port, host, () => {
     console.log('http://' + host + ':' + port)
 })
