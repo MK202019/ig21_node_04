@@ -10,7 +10,7 @@ router.get('/login',(req,res) => {
 })
 
 router.post('/auth', (req, res) => {
-    let message = 'ログインできません';
+    let message = 'ログインできません'
     const login_name = req.body.login_name
     const password = req.body.password
     
