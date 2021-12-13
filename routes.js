@@ -1,9 +1,16 @@
 const express = require('express')
+
+const homeContoroller = require('HomeController')
+
 const item = require('./models/item')
 const router = express.Router()
 
 const default_login_name = process.env.LOGIN_NAME
 const default_passsword = process.env.PASSWORD
+
+//HomeController
+router.get('/', homeContoroller.index)
+router.get('/profile', homeContoroller.profile)
 
 router.get('/login',(req,res) => {
     res.render('login/index.ejs')
