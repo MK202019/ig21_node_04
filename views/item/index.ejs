@@ -1,8 +1,6 @@
-<ul> 
-    <%  items.forEach((item) => { %>
-        <dd> <a href="/item/<%= item.id %>"><%= item.name %></a></dd>
-        <dd><%= item.price %>円</dd>
-   <% }) %>
-    
-    %>
+<ul>
+<% items.map((item) => { %>
+<dd><a href="/item/<%= item.id %>"><%= item.name %></a></dd>
+<dd><%= item.price %>円</dd>
+<% }) %>
 </ul>

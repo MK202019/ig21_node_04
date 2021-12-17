@@ -1,4 +1,5 @@
 const default_login_name = process.env.LOGIN_NAME
+const default_password = process.env.PASSWORD
 
 
 exports.index = (req, res) => {
@@ -12,7 +13,7 @@ exports.auth = (req, res) => {
 
     if(login_name == default_login_name
         && password == default_password){
-            message = 'ログインしました。'
+        message = 'ログインしました。'
     }
     res.send(message)
 
